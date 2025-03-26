@@ -6,7 +6,7 @@ export interface IProject {
 }
 
 export interface IReport {
-  id?: number
+  id: number
   date: Dayjs | null
   project: string
   comments: string

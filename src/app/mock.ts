@@ -6,5 +6,5 @@ export const Projects = [
   { id: 5, name: 'Project 5' },
   { id: 6, name: 'Project 6' },
   { id: 7, name: 'Project 7' },
-  { id: 8, name: 'Project 8' },
-];
+  { id: 8, name: 'Project 8' }
+]

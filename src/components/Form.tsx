@@ -15,7 +15,7 @@ import { IReport } from '../types'
 export default function Form({
   handleAddReport
 }: {
-  handleAddReport: (data: Omit<IReport, 'id'>) => void
+  handleAddReport: (data: IReport) => void
 }) {
   const { register, handleSubmit, control } = useForm<IReport>({
     defaultValues: {
@@ -26,11 +26,7 @@ export default function Form({
   })
 
   const onSubmit: SubmitHandler<IReport> = data => {
-    const reportData = {
-      ...data,
-      id: Date.now()
-    }
-    handleAddReport(reportData)
+    handleAddReport(data)
   }
 
   return (

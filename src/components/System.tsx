@@ -8,8 +8,9 @@ import ReportList from './ReportList'
 export default function System() {
   const [reports, setReport] = useState<IReport[]>([])
 
-  function handleAddReport(newReport: IReport) {
-    setReport([...reports, newReport])
+  function handleAddReport(newReport: Omit<IReport, 'id'>) {
+    const reportWithId = { ...newReport, id: Date.now() }
+    setReport([...reports, reportWithId])
   }
 
   function handleDeleteReport(id: number) {
